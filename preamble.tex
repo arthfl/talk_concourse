@@ -1,0 +1,45 @@
+\usepackage{pgfpages}
+
+\usepackage{xcolor}
+
+\lstset{
+    basicstyle=\ttfamily,
+    stepnumber=2,
+    numbersep=5pt,
+    backgroundcolor=\color{black!80},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    captionpos=b,
+    breaklines=true,
+    breakatwhitespace=true,
+    breakautoindent=true,
+    linewidth=\textwidth
+}
+
+% colors: white text on 90% black background
+\setbeamercolor{normal text}{fg=white,bg=black!95}
+%\setbeamercolor{normal text}{fg=white}
+
+
+% light blue as a highlight color
+\setbeamercolor*{structure}{fg=green!20!white}
+\setbeamercolor{alerted text}{use=structure,fg=structure.fg}
+\setbeamercolor*{palette primary}{use=structure,fg=structure.fg}
+\setbeamercolor*{palette secondary}{use=structure,fg=structure.fg!95!black}
+\setbeamercolor*{palette tertiary}{use=structure,fg=structure.fg!90!black}
+\setbeamercolor*{palette quaternary}{use=structure,fg=structure.fg!95!black,bg=black!80}
+
+\setbeamercolor*{framesubtitle}{fg=white}
+
+% eliminate silly beamer navigation line at bottom of slides
+\setbeamertemplate{navigation symbols}{}
+
+% ensure text jusfication
+\usepackage{ragged2e}
+\justifying
+
+% pandoc makes 2nd-lever headers into blocks, and this ensures justification
+% in blocks too
+\addtobeamertemplate{block begin}{}{\justifying}
